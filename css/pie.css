@@ -1,0 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+.content {
+    flex: 1;
+}
+footer {
+    background-color: rgba(162, 217, 206, 0.633);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+

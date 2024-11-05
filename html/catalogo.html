@@ -1,0 +1,700 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" title="Catalogo digital">
+</head>
+<link rel="stylesheet" href="../css/encabezado.css">
+<link rel="stylesheet" href="../css/pie.css">
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../imagenes/logo.jpg" alt="100">
+            <h2 class="nombre-empresa">Jardín Botanico Xenda Kinil</h2>
+        </div>
+        <nav>
+            <a href="../../presentacion.html" class="nav link">Inicio</a>
+            <a href="sobreNosotros.html" class="nav link">Sobre nosotros</a>
+            <a href="contactanos.html" class="nav link">Contactanos</a>
+        </nav>
+    </header>
+    <h1>Catalogo</h1>
+    <a href="../../presentacion.html">Volver al inicio</a>
+    <p>Para información adicional presiona la imagen</p>
+    <table border="1">
+        <tr>
+            <td>
+                Imagen del producto
+            </td>
+            <td>
+                Nombre del producto y cuidados
+            </td>
+            <td>
+                Carrito
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/pan de bola .jpg" alt="Imagen" class="imagen-zoom" onclick="zoomImagen(this)"
+                    data-info="Precio $00.00
+                    Informacion: 
+                    >
+                <!-- Contenedor para la información adicional -->
+                <div id="info" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info').innerText = img.getAttribute('data-info'); // Mostrar información adicional
+                            document.getElementById('info').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info').innerText = ''; // Ocultar la información
+                            document.getElementById('info').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Pan de queso de bola
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('Pan de queso de bola', 250)">Agregar al
+                        Carrito</button>
+                </div>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom2 {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/pan de nata.jpg" alt="Imagen" class="imagen-zoom" onclick="zoomImagen2(this)"
+                    data-info2="Precio: $00.00
+            Información:">
+
+                <!-- Contenedor para la información adicional -->
+                <div id="info2" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen2(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info2').innerText = img.getAttribute('data-info2'); // Mostrar información adicional
+                            document.getElementById('info2').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info2').innerText = ''; // Ocultar la información
+                            document.getElementById('info2').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Pan de nata
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('Pan de nata', 220)">Agregar al Carrito</button>
+                </div>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/roles.jpg" alt="Imagen" class="imagen-zoom" onclick="zoomImagen3(this)" data-info="Precio:
+                    Información">
+
+                <!-- Contenedor para la información adicional -->
+                <div id="info3" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen3(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info3').innerText = img.getAttribute('data-info'); // Mostrar información adicional
+                            document.getElementById('info3').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info3').innerText = ''; // Ocultar la información
+                            document.getElementById('info3').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Roles de canela
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('Roles de canela', 45)">Agregar al Carrito</button>
+                </div>
+            </td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/cheesecake .jpg" alt="Imagen" class="imagen-zoom" onclick="zoomImagen4(this)"
+                    data-info="Precio $00.00
+                 información:">
+
+                <!-- Contenedor para la información adicional -->
+                <div id="info4" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen4(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info4').innerText = img.getAttribute('data-info'); // Mostrar información adicional
+                            document.getElementById('info4').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info4').innerText = ''; // Ocultar la información
+                            document.getElementById('info4').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Cheesecake
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('Cheesecake', 350)">Agregar al Carrito</button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/empanadas cajeta.jpg" alt="Imagen" class="imagen-zoom" onclick="zoomImagen5(this)"
+                    data-info="Precio $00.00 
+                    Información:">
+
+                <!-- Contenedor para la información adicional -->
+                <div id="info5" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen5(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info5').innerText = img.getAttribute('data-info'); // Mostrar información adicional
+                            document.getElementById('info5').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info5').innerText = ''; // Ocultar la información
+                            document.getElementById('info5').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Empanadas de cajeta
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('Empanadas de cajeta', 10)">Agregar al
+                        Carrito</button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/chocolatin.jpg" alt="Imagen" class="imagen-zoom" onclick="zoomImagen6(this)"
+                    data-info="Precio $00.00
+                    Información:
+                     ">
+
+                <!-- Contenedor para la información adicional -->
+                <div id="info6" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen6(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info6').innerText = img.getAttribute('data-info'); // Mostrar información adicional
+                            document.getElementById('info6').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info6').innerText = ''; // Ocultar la información
+                            document.getElementById('info6').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Pastel chocolatin
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('Pastel chocolatin', 520)">Agregar al Carrito</button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/brownie.jpg" alt="Imagen" class="imagen-zoom" onclick="zoomImagen7(this)" data-info="IPrecio $00.00 por pieza
+                    Información:">
+
+                <!-- Contenedor para la información adicional -->
+                <div id="info7" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen7(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info7').innerText = img.getAttribute('data-info'); // Mostrar información adicional
+                            document.getElementById('info7').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info7').innerText = ''; // Ocultar la información
+                            document.getElementById('info7').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Brownies
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('Brownies', 35)">Agregar al Carrito</button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/fruitcake.jpg" alt="Imagen" class="imagen-zoom" onclick="zoomImagen8(this)"
+                    data-info="Precio $00.00
+                    Información:">
+
+                <!-- Contenedor para la información adicional -->
+                <div id="info8" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen8(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info8').innerText = img.getAttribute('data-info'); // Mostrar información adicional
+                            document.getElementById('info8').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info8').innerText = ''; // Ocultar la información
+                            document.getElementById('info8').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Fruit cake
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('fruitcake', 200)">Agregar al Carrito</button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/pastel bola.jpg" alt="Imagen" class="imagen-zoom" onclick="zoomImagen9(this)"
+                    data-info="Precio $360.00
+                    Información:">
+
+                <!-- Contenedor para la información adicional -->
+                <div id="info9" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen9(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info9').innerText = img.getAttribute('data-info'); // Mostrar información adicional
+                            document.getElementById('info9').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info9').innerText = ''; // Ocultar la información
+                            document.getElementById('info9').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Pastel de queso de bola
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('Pastel de queso de bola', 360)">Agregar al
+                        Carrito</button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/rosca glaseada.jpg" alt="Imagen" class="imagen-zoom" onclick="zoomImagen10(this)"
+                    data-info="Precio $00.00
+                    Información:">
+
+                <!-- Contenedor para la información adicional -->
+                <div id="info10" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen10(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info10').innerText = img.getAttribute('data-info'); // Mostrar información adicional
+                            document.getElementById('info10').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info10').innerText = ''; // Ocultar la información
+                            document.getElementById('info10').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Rosca glaseada de queso de bola
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('Rosca glaseada de queso de bola', 360)">Agregar al
+                        Carrito</button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/volteado de piña.jpg" alt="Imagen" class="imagen-zoom" onclick="zoomImagen11(this)"
+                    data-info="Precio $00.00
+                    Informacion:">
+
+                <!-- Contenedor para la información adicional -->
+                <div id="info11" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen11(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info11').innerText = img.getAttribute('data-info'); // Mostrar información adicional
+                            document.getElementById('info11').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info11').innerText = ''; // Ocultar la información
+                            document.getElementById('info11').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Volteado de piña
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('Volteado de piña', 360)">Agregar al Carrito</button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/rosca de philadelphia.jpg" alt="Imagen" class="imagen-zoom"
+                    onclick="zoomImagen12(this)" data-info="Precio $00.00
+                    Información:">
+
+                <!-- Contenedor para la información adicional -->
+                <div id="info12" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen12(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info12').innerText = img.getAttribute('data-info'); // Mostrar información adicional
+                            document.getElementById('info12').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info12').innerText = ''; // Ocultar la información
+                            document.getElementById('info12').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Rosca de Philadelphia
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('Rosca de Philadelphia', 370)">Agregar al
+                        Carrito</button>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <style>
+                    /* Estilos para la imagen zoom */
+                    .imagen-zoom {
+                        width: 200px;
+                        /* Tamaño inicial de la imagen */
+                        transition: width 0.3s;
+                        /* Transición suave al hacer zoom */
+                        cursor: pointer;
+                        /* Cambia el cursor al hacer hover */
+                    }
+                </style>
+                <!-- Imagen con zoom -->
+                <img src="../../img/brazo gitano.jpg" alt="Imagen" class="imagen-zoom" onclick="zoomImagen13(this)"
+                    data-info="Precio $00.00
+                    Información:">
+
+                <!-- Contenedor para la información adicional -->
+                <div id="info13" style="display: none;"></div>
+
+                <script>
+                    function zoomImagen13(img) {
+                        if (img.style.width === '200px') {
+                            img.style.width = '400px'; // Hacer zoom a la imagen
+                            document.getElementById('info13').innerText = img.getAttribute('data-info'); // Mostrar información adicional
+                            document.getElementById('info13').style.display = 'block'; // Mostrar el contenedor de información
+                        } else {
+                            img.style.width = '200px'; // Deshacer zoom
+                            document.getElementById('info13').innerText = ''; // Ocultar la información
+                            document.getElementById('info13').style.display = 'none'; // Ocultar el contenedor de información
+                        }
+                    }
+                </script>
+            </td>
+            <td>
+                Brazo gitano
+            </td>
+            <td>
+                <div class="product">
+                    <span></span>
+                    <button class="btn" onclick="agregarAlCarrito('Brazo gitano', 500)">Agregar al Carrito</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="cart">
+        <!-- Carrito -->
+        <h2>Carrito de Compra</h2>
+        <ul id="carrito"></ul>
+        <p>Total: <span id="total">$0</span></p>
+        </form>
+    </div>
+
+    <script>
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            mostrarCarrito();
+        }
+
+        function mostrarCarrito() {
+            const carritoElemento = document.getElementById('carrito');
+            carritoElemento.innerHTML = '';
+            carrito.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${item.nombre} - $${item.precio}`;
+                const eliminarBtn = document.createElement('button');
+                eliminarBtn.textContent = 'Eliminar';
+                eliminarBtn.classList.add('btn', 'eliminar-btn');
+                eliminarBtn.onclick = function () {
+                    eliminarProducto(index);
+                };
+                li.appendChild(eliminarBtn);
+                carritoElemento.appendChild(li);
+            });
+            calcularTotal();
+        }
+
+        function calcularTotal() {
+            const total = carrito.reduce((total, item) => total + item.precio, 0);
+            document.getElementById('total').textContent = `$${total}`;
+        }
+
+        // Función para eliminar un producto del carrito
+        function eliminarProducto(index) {
+            carrito.splice(index, 1);
+            mostrarCarrito();
+        }
+
+    </script>
+   <a href="añadir.html"><input type="button" value="Añadir Producto al catalogo"></a>
+    <br><br><br>
+
+    <button onclick="window.location.href='pago.html'">Proceder al pago</button>
+    <br><br><br>
+
+
+</body>
+<footer>
+    <p>Elaborado por Mario Camara. Daniela Pozo. Yesenia Villa Y Carlos Zetina</p>
+</footer>
+
+</html>

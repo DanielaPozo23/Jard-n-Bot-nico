@@ -1,0 +1,11 @@
+/* Estilo para centrar la tabla y su contenido */
+table {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff00; /* Color blanco */
+    padding: 20px; /* Añade espacio alrededor de la tabla */
+}
+
+td, th {
+    text-align: center; /* Centra el texto dentro de las celdas y cabeceras */
+}

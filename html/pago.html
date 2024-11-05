@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Estilos para la presentación */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(../imagenes/fondo4.jpg); /* Cambia esta URL por la de tu imagen */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="radio"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .cart {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo de Pago</title>
+</head>
+<body>
+    <!-- Método de Pago -->
+    <form id="paymentForm" onsubmit="return procesarPago()">
+        <h2>Método de Pago</h2>
+        <input type="radio" id="creditCard" name="paymentMethod" value="creditCard" checked>
+        <label for="creditCard">Tarjeta de Crédito</label><br>
+        <input type="radio" id="cash" name="paymentMethod" value="cash">
+        <label for="cash">Efectivo</label><br>
+
+        <div id="creditCardFields">
+            <label for="cardNumber">Número de Tarjeta:</label>
+            <input type="text" id="cardNumber" required><br>
+            <label for="cardExpiry">Fecha de Vencimiento:</label>
+            <input type="text" id="cardExpiry" placeholder="MM/YY" required><br>
+            <label for="cardName">Nombre del dueño:</label>
+            <input type="text" id="cardName" required>
+        </div>
+
+        <div id="cashFields" style="display: none;">
+            <label for="customerName">Nombre del Cliente:</label>
+            <input type="text" id="customerName"><br>
+            <label for="streetName">Nombre de la Calle:</label>
+            <input type="text" id="streetName"><br>
+            <label for="houseNumber">Número de Casa:</label>
+            <input type="text" id="houseNumber"><br>
+        </div>
+
+        <button type="submit" class="btn">Pagar</button>
+        <button type="button" class="btn" onclick="cancelarPago()">Cancelar</button>
+    </form>
+
+    <script>
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            mostrarCarrito();
+        }
+
+        function mostrarCarrito() {
+            const carritoElemento = document.getElementById('carrito');
+            carritoElemento.innerHTML = '';
+            carrito.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.nombre} - $${item.precio}`;
+                carritoElemento.appendChild(li);
+            });
+            calcularTotal();
+        }
+
+        function calcularTotal() {
+            const total = carrito.reduce((total, item) => total + item.precio, 0);
+            document.getElementById('total').textContent = `$${total}`;
+        }
+
+        function procesarPago() {
+            const paymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+            if (paymentMethod === 'cash') {
+                const customerName = document.getElementById('customerName').value;
+                const streetName = document.getElementById('streetName').value;
+                const houseNumber = document.getElementById('houseNumber').value;
+                alert(`Pago en efectivo procesado con éxito para ${customerName}, ${houseNumber} ${streetName}`);
+            } else {
+                const cardNumber = document.getElementById('cardNumber').value;
+                alert(`Pago con tarjeta procesado con éxito. Número de tarjeta: ${cardNumber}`);
+            }
+            window.location.href = 'catalogo.html';
+            return false; // Evita que el formulario se envíe
+        }
+
+        function cancelarPago() {
+            window.location.href = window.location.href; // Redirige a la misma página para reiniciar
+        }
+
+        document.getElementById('cash').addEventListener('change', function () {
+            document.getElementById('cashFields').style.display = 'block';
+            document.getElementById('creditCardFields').style.display = 'none';
+        });
+
+        document.getElementById('creditCard').addEventListener('change', function () {
+            document.getElementById('cashFields').style.display = 'none';
+            document.getElementById('creditCardFields').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
