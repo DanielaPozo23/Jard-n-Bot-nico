@@ -1,11 +1,78 @@
-/* Estilo para centrar la tabla y su contenido */
-table {
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #ffffff00; /* Color blanco */
-    padding: 20px; /* Añade espacio alrededor de la tabla */
+/* Estilos básicos para el menú */
+.menu-container {
+    text-align: center;
+    padding: 20px;
+    background: #E8F5E9; /* Verde suave de fondo */
+    border: 1px solid #A5D6A7; /* Borde suave */
+    border-radius: 8px;
+    max-width: 300px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-td, th {
-    text-align: center; /* Centra el texto dentro de las celdas y cabeceras */
+.menu-title {
+    font-size: 24px;
+    color: #388E3C; /* Verde oscuro */
+    font-family: 'Georgia', serif;
+    margin-bottom: 15px;
 }
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    position: relative;
+    margin: 10px 0;
+    background: #C8E6C9; /* Verde claro */
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu li:hover {
+    background: #A5D6A7; /* Cambio de color al pasar el mouse */
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 12px 15px;
+    font-size: 18px;
+    color: #2E7D32; /* Verde */
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.dropdown-menu li a:hover {
+    color: #1B5E20; /* Verde oscuro en hover */
+}
+
+/* Efecto decorativo tipo jardín */
+.dropdown-menu li a::before {
+    content: "🌿"; /* Icono decorativo */
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-menu li:hover a::before {
+    transform: translateY(-50%) scale(1.2); /* Efecto de agrandar en hover */
+}
+
+/* Sombra suave en hover */
+.dropdown-menu li:hover {
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+}
+
+/* Transición suave */
+.dropdown-menu li a {
+    transition: all 0.3s ease-in-out;
+}
+
